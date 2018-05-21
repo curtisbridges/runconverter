@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>5k Pace</title>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Treadmill Values</h1>
+        <div>
+            <input type="text" id="distance" value="" placeholder="Distance (miles)"> miles
+            <div>
+                <input type="text" id="minutes" value="" placeholder="minutes"> :
+                <input type="text" id="seconds" value="" placeholder="seconds">
+            </div>
+        </div>
+
+        <h2>Results</h2>
+        <ul>
+            <li>Your average mph was: <span id="aveMph" />
+            <li>Your pace is (min/mile): <span id="pace" />
+            <li>Your 5K time would be: <span id="5kTime" />
+            <li>Your 10K time would be: <span id="10kTime" />
+        </ul>
+        <script src="app.js"></script>
+    </body>
+</html>
