@@ -43,14 +43,9 @@ function calculateValues(distance, minutes, seconds) {
   const aveMph = distance / (timeInSeconds / 3600.0);
   const minutesPerMile = (60.0 / aveMph);
 
-  // console.log(`Average mph is ${aveMph.toFixed(2)}`);
-  // console.log(`Pace is ${convertFloatToTime(minutesPerMile)} minutes per mile.`);
-
   const fiveK = minutesPerMile * 3.108;
-  // console.log(`5K time would be ${convertFloatToTime(fiveK)}`);
 
   const tenK = minutesPerMile * 6.216;
-  // console.log(`10K time would be ${convertFloatToTime(tenK)}`);
 
   updateResults(aveMph, minutesPerMile, fiveK, tenK);
 }
@@ -58,7 +53,8 @@ function calculateValues(distance, minutes, seconds) {
 function convertFloatToTime(time) {
   const minutes = Math.floor(time);
   const seconds = Math.round((time - minutes) * 60);
-  return `${minutes}:${seconds}`
+  const  secondsString = (seconds + "").padStart(2,"0");
+  return `${minutes}:${secondsString}`
 }
 
 // update divs for aveMph, pace, 5kTime, 10kTime
